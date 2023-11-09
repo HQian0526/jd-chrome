@@ -10,7 +10,8 @@
 	},
 	"permissions": [],
 	"background": {
-		"service_worker": "js/background.js"
+		"service_worker": "js/background.js",
+		"type": "module"
 	},
 	"icons": {
 		"16": "assets/images/share.png",
@@ -19,7 +20,8 @@
 	},
 	"content_scripts": [
 		{
-			"matches": ["https://*.baidu.com/*"],
+			
+			"matches": ["https://*.jd.com/*"],
 			"css": ["css/content.css"],
 			"js": ["js/chunk-vendors.js","js/content.js"],
 			"run_at": "document_idle"
@@ -33,4 +35,4 @@
 //manifest_version的值只能写2或3。且manifest的V2版本已经不常使用了，推荐用3。
 //manifest3中background属性下scripts属性不再有，用service_worker属性代替。
 //manifest3中web_accessible_resources属性语法有变动，变成数组里面包着对象，路径前加resource属性。
-//manifest3中browser_action不再有，用action属性代替。
+//manifest3中browser_action不再有，用action属性代替。"matches": ["https://*.baidu.com/*"],

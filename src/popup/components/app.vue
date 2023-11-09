@@ -1,8 +1,8 @@
 <template>
 	<div class="popup_page">
-		this is popup page
-		<div class="popup_page_main">
-			this is popup page main
+		这是个京东抢劫器,请做个遵纪守法的乖宝宝
+		<div class="tip">
+			本插件仅做学习交流使用，禁止外传后果自负！
 		</div>
 	</div>
 </template>
@@ -15,9 +15,11 @@
 
 <style lang="less" scoped>
 	.popup_page{
+		width: 300px;
 		color: red;
-		.popup_page_main{
-			color: green;
-		}
+	}
+	.tip{
+		margin-top: 10px;
+		color: red;
 	}
 </style>
